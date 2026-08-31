@@ -1,0 +1,137 @@
+.site-footer {
+    background-color: #FEE827; /* Cor amarela principal */
+    color: #1a1a1a; /* Cor de texto escura para contraste */
+    padding: 4rem 2rem; /* Espaçamento interno generoso */
+    margin-top: 5rem; /* Espaço acima do footer */
+}
+
+.footer-container {
+    width: 100%; /* Garante que o container ocupe todo o espaço disponível */
+    max-width: 1300px; /* Mesma largura máxima do seu .maincont */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+    gap: 2rem; /* Espaço entre as colunas */
+}
+
+/* --- Coluna da Logo e Descrição --- */
+.footer-about {
+    flex: 2; /* Ocupa mais espaço */
+    min-width: 280px; /* Largura mínima antes de quebrar */
+}
+
+.footer-about .logo img {
+    height: 40px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-bottom: 1rem;
+}
+
+.footer-about p {
+    font-family: "Maven Pro", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2b2b2b;
+}
+
+/* --- Colunas de Links --- */
+.footer-links {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-links h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0; /* CORREÇÃO: Remove o padding padrão da lista */
+}
+
+.footer-links ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links ul a {
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 1rem;
+}
+
+.footer-links ul a:hover {
+    color: #4C83F3; /* Azul do seu tema para o hover */
+}
+
+/* --- Coluna de Contato --- */
+.footer-contact {
+    flex: 1;
+    min-width: 200px;
+    display: flex; /* CORREÇÃO: Usa flexbox para alinhamento interno */
+    flex-direction: column; /* CORREÇÃO: Empilha os itens verticalmente */
+    align-items: flex-end; /* CORREÇÃO: Alinha título e botão à direita */
+}
+
+.footer-contact a.contact-button {
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.footer-contact a.contact-button:hover {
+    background-color: #4C83F3;
+    transform: translateY(-3px);
+}
+
+.footer-contact a.contact-button i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.footer-contact a.contact-button:hover i {
+    transform: translateX(4px);
+}
+
+/* --- Barra de Copyright --- */
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(26, 26, 26, 0.1);
+    font-size: 0.9rem;
+    color: #5B5B5B;
+}
+
+/* ================================== */
+/* ==          RESPONSIVO          == */
+/* ================================== */
+
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column; /* Empilha as colunas */
+        align-items: center;   /* Centraliza os blocos de coluna */
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-contact {
+        width: 100%;
+        max-width: 400px; /* Limita a largura no centro */
+        text-align: left; 
+        align-items: flex-start; /* Alinha o conteúdo dos blocos à esquerda */
+    }
+}

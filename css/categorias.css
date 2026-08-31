@@ -1,0 +1,422 @@
+/* === CONFIGURAÇÕES GLOBAIS E FONTES === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Sora', sans-serif; /* Fonte padrão, mude se necessário */
+}
+
+/* === ESTILOS BASE (MOBILE-FIRST) === */
+
+/* --- SEÇÃO MAIN (HERO) --- */
+main {
+  margin-top: 4rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.maincont {
+  /* No mobile, este é apenas um container para o espaçamento e largura máxima */
+  display: flex;
+  flex-direction: column; /* Texto empilhado em mobile */
+  justify-content: center;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.maintext {
+  /* O fundo amarelo é aplicado diretamente na caixa de texto */
+  background-color: #FEE827;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  width: 100%;
+}
+
+.maintext h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem; /* 28px */
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.maintext p {
+  font-size: 1rem; /* 16px */
+  letter-spacing: 1px;
+  max-width: 480px;
+}
+
+.maintext a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1.5rem; /* 24px */
+  padding: 10px 20px;
+  background-color: #1a1a1a;
+  color: white;
+  font-weight: 500;
+  font-size: 1.125rem; /* 18px */
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.maintext a:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+}
+
+.maintext a i {
+  transition: transform 0.3s ease;
+}
+
+.maintext a:hover i {
+  transform: translateX(5px);
+}
+
+.maincont img {
+  display: none; /* Imagem escondida por padrão (mobile) */
+}
+
+
+/* --- SEÇÃO DESENVOLVER --- */
+.desenvolver {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 4rem 1rem 0;
+}
+
+.desenvolvercont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.desenvolvercont h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.devboxcont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.devbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.devbox.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.devbox .devnum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.devbox h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.devbox p {
+  font-size: 1rem; /* 16px */
+  letter-spacing: 1px;
+  margin-bottom: 2.5rem;
+}
+
+.devbox img {
+  height: 8rem;
+  margin-bottom: 10px;
+  user-select: none;
+  border-radius: 20px;
+}
+
+
+/* --- SEÇÃO DEPOIMENTOS --- */
+.depoimento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 50vh;
+  padding: 2rem 1rem;
+}
+
+.depoimentocont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1300px;
+  background-color: #4C83F3;
+  border-radius: 20px;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.depoimentocont p {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 400;
+  letter-spacing: 1px;
+  max-width: 900px;
+  margin-bottom: 1rem;
+}
+
+.depoimentocont h3 {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+/* --- SEÇÃO CATEGORIAS --- */
+.categorias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 4rem 1rem;
+}
+
+.categorias h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.categoriascont {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 coluna por padrão */
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.categoriabox {
+  position: relative;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.categoriabox:hover {
+  transform: scale(1.03);
+}
+
+.categoriabox .text {
+  width: 90%;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.categoriabox .text h3,
+.categoriabox .text p {
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+.categoriabox .text h3 {
+  font-size: 1.125rem; /* 18px */
+  margin-bottom: 5px;
+}
+
+.categoriabox .text p {
+  font-size: 0.875rem; /* 14px */
+}
+
+.categoriabox:hover .text {
+  background-color: #000;
+}
+
+.categoriabox:hover .text h3,
+.categoriabox:hover .text p {
+  color: white;
+}
+
+
+/* --- SEÇÃO AÇÃO (CTA) --- */
+.acao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 4rem 1rem;
+}
+
+.acaocont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1300px;
+  min-height: 35vh;
+  background-color: #4C83F3;
+  border-radius: 20px;
+  color: white;
+  padding: 2rem;
+}
+
+.acaocont h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+  max-width: 1000px;
+  margin-bottom: 1rem;
+}
+
+.acaocont p {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 400;
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+}
+
+
+/* === MEDIA QUERIES (TABLETS E DESKTOPS) === */
+
+/* Tablets (e telas maiores que celular) */
+@media (min-width: 768px) {
+  .desenvolvercont h2,
+  .categorias h2 {
+    font-size: 2.5rem; /* 40px */
+  }
+
+  .devbox {
+    width: 45%; /* 2 por linha */
+  }
+
+  .depoimentocont p {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  .categoriascont {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  }
+
+  .acaocont h2 {
+    font-size: 2.5rem; /* 40px */
+  }
+}
+
+/* Desktops pequenos e maiores */
+@media (min-width: 1024px) {
+  main {
+    min-height: 80vh; /* Aumentado um pouco para dar mais espaço */
+    margin-top: 8.5vh;
+  }
+  
+  .maincont {
+    flex-direction: row; /* Coloca os itens lado a lado */
+    gap: 2rem;
+  }
+
+  .maintext {
+    flex: 0 1 50%; /* Define que o texto ocupa 50% do espaço na horizontal */
+    padding: 2rem;
+  }
+  
+  .maintext h1 {
+    font-size: 2.75rem; /* 44px */
+    letter-spacing: -2px;
+  }
+  
+  .maintext p {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .maincont img {
+    display: block; /* Mostra a imagem no desktop */
+    flex: 1 0 45%; /* Define que a imagem ocupa 45% do espaço */
+    height: 40rem;
+    width: 45rem;
+    object-fit: cover; /* Garante que a imagem não se distorça */
+    border-radius: 20px;
+  }
+
+  /* O resto das seções */
+  .desenvolvercont h2,
+  .categorias h2,
+  .acaocont h2 {
+    font-size: 3rem; /* 48px */
+  }
+
+  .devboxcont {
+    justify-content: space-between;
+  }
+
+  .devbox {
+    width: 180px; /* Largura fixa para os itens */
+  }
+
+  .depoimentocont p {
+    font-size: 1.75rem; /* 28px */
+  }
+
+  .categoriascont {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  }
+}

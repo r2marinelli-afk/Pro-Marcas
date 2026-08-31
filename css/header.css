@@ -1,0 +1,345 @@
+/* ESTILOS GERAIS */
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: "Maven Pro", sans-serif;
+}
+html {
+    font-size: 16px; 
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body.menu-open {
+    overflow: hidden; /* Impede o scroll da página quando o menu mobile está aberto */
+}
+
+/* HEADER E NAVBAR CORRIGIDOS */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 87rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+/* NOVO: Container para agrupar o logo e os links no lado esquerdo */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem; 
+    font-weight: 500;
+}
+a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+.nav-links > a:hover {
+    opacity: 0.6;
+    transform: scale(1.05);
+}
+
+.logo a {
+    all: unset;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.logo img {
+    height: 2.2rem;
+    margin-right: 1.875rem;
+    transition: transform 0.3s ease;
+}
+.nav-user a {
+    background-color: #2EC252;
+    padding: 0.625rem 1.25rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+.nav-user a:hover {
+    opacity: 0.9;
+}
+.nav-user a i {
+    transition: transform 0.3s ease;
+}
+.nav-user a:hover i {
+    transform: translateX(5px);
+}
+
+/* -------- BACKDROP E SUBMENU DESKTOP -------- */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    background: rgba(0, 0, 0, 0.4); 
+}
+.backdrop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.submenu-modal {
+    position: fixed;
+    top: 4rem;
+    left: 50%;
+    transform: translate(-50%, -10px);
+    background: white;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 900;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    min-width: 37.5rem;
+    max-width: 43.75rem;
+}
+.submenu-modal.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+.submenu-left {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-right: 1px solid #ddd;
+}
+.submenu-left .menu-item {
+    padding: 0.625rem;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.125rem;
+    width: 100%;
+}
+.submenu-left .menu-item:hover,
+.submenu-left .menu-item.active {
+    color: #4C83F3;
+    background-color: #f0f5ff;
+}
+.submenu-right {
+    width: 55%;
+    padding: 1.25rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.submenu-right.active {
+    display: flex;
+}
+.submenu-right a {
+    font-size: 1rem;
+    color: #333;
+    padding: 0.25rem;
+}
+.submenu-right a:hover {
+    color: #4C83F3;
+}
+.submenu-right img {
+    margin-top: 0.625rem;
+    width: 100%;
+    height: 12.5rem;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ================================== */
+/* ==     NOVO MENU MOBILE         == */
+/* ================================== */
+
+/* Ícone Hamburger (visível apenas no mobile) */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2000; /* Fica acima de tudo */
+    padding: 0.5rem;
+    color: #1a1a1a;
+}
+.hamburger.open i::before {
+    content: "\f00d"; /* Ícone "X" do FontAwesome */
+}
+
+/* Oculta o menu mobile antigo (se houver) */
+.mobile-menu {
+    display: none !important;
+}
+
+/* --- Container principal do novo menu mobile --- */
+.mobile-nav-container {
+    position: fixed;
+    top: 4rem; /* Altura do header */
+    left: 0;
+    width: 85%; /* Não ocupa a tela toda */
+    max-width: 400px; /* Largura máxima */
+    height: calc(100vh - 4rem);
+    background-color: white;
+    z-index: 1500;
+    transform: translateX(-100%); /* Começa escondido à esquerda */
+    transition: transform 0.4s ease;
+    overflow-x: hidden; /* Essencial para o efeito de slide */
+    display: flex; /* Usa flex para alinhar os painéis lado a lado */
+}
+.mobile-nav-container.open {
+    transform: translateX(0); /* Mostra o menu */
+    box-shadow: 5px 0px 25px rgba(0,0,0,0.15);
+}
+
+/* --- Painéis (principal e submenu) --- */
+.mobile-nav-panel {
+    min-width: 100%; /* Cada painel ocupa a largura total do container */
+    height: 100%;
+    overflow-y: auto; /* Permite scroll vertical se o conteúdo for grande */
+    transition: transform 0.4s ease;
+    padding: 1.5rem;
+}
+#main-menu-panel a, #submenu-links-container a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+#main-menu-panel a i {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* --- Lógica de Animação dos Painéis --- */
+.mobile-nav-container.submenu-active #main-menu-panel {
+    transform: translateX(-100%); /* Desliza painel principal para a esquerda */
+}
+.mobile-nav-container.submenu-active #submenu-panel {
+    transform: translateX(-100%); /* Traz o painel de submenu da direita */
+}
+
+/* --- Estilos do painel de Submenu --- */
+.submenu-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+#back-to-main-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    color: #1a1a1a;
+}
+#submenu-title a {
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-bottom: none;
+    padding: 0;
+}
+#submenu-links-container a {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* botao especial */
+.especialistabtn {
+    color: white;
+    font-weight: 600;
+    background-color: #2EC252;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.3s ease;
+}
+.especialistabtn:hover {
+    opacity: 90%;
+}
+.especialistabtn i {
+    transition: transform 0.3s ease;
+}
+.especialistabtn:hover i {
+    transform: translateX(5px) rotate(20deg);
+}
+
+/* CSS para a imagem no submenu mobile */
+#submenu-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem; /* Espaço entre a imagem e os links */
+    object-fit: cover;
+    display: block; /* Garante que a imagem seja exibida */
+}
+
+/* ================================== */
+/* ==   MEDIA QUERY PARA MOBILE    == */
+/* ================================== */
+@media (max-width: 1024px) {
+    /* Mostra o ícone hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    /* Esconde APENAS os links, mantendo o logo visível pois ele está fora desta div */
+    .nav-links {
+        display: none;
+    }
+    
+    .navbar {
+        padding: 0 1.25rem;
+        max-width: none;
+    }
+    
+    .nav-user a {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    /* Ajusta o logo para o layout mobile */
+    .logo img {
+        height: 1.9rem; /* Tamanho ligeiramente menor para mobile */
+        margin-right: 0; /* Remove a margem para ajudar na centralização */
+    }
+}

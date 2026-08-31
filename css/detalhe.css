@@ -1,0 +1,188 @@
+/* css/detalhe.css */
+
+/* Container principal da página de detalhes */
+.detalhe-main {
+    margin-top: 8rem; /* Espaçamento do topo */
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.produto-container {
+    display: flex; /* A mágica do layout lado a lado */
+    flex-wrap: wrap; /* Em telas pequenas, os itens quebram a linha */
+    max-width: 1200px;
+    width: 100%;
+    gap: 3rem; /* Espaço entre a imagem e as informações */
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Coluna da imagem */
+.produto-imagem {
+    flex: 1 1 400px; /* Base de 400px, pode crescer e encolher */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.produto-imagem img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Coluna das informações */
+.produto-info {
+    flex: 1 1 500px; /* Base de 500px, tem mais espaço para texto */
+    display: flex;
+    flex-direction: column;
+}
+
+.produto-info h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.produto-info .descricao {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    white-space: pre-wrap; /* Mantém as quebras de linha da descrição */
+}
+
+.produto-info .especificacoes {
+    background-color: #f9f9f9;
+    border-left: 4px solid #007bff; /* Um detalhe azul para destacar */
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.produto-info .especificacoes p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Botão de WhatsApp */
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.2rem;
+    background-color: #2EC252;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px; /* Botão arredondado */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: flex-start; /* Alinha o botão à esquerda */
+}
+
+.whatsapp-button i {
+    transition: transform 0.3s ease;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.whatsapp-button:hover i {
+    transform: translateX(5px) rotate(20deg);
+}
+
+.whatsapp-button:hover {
+        opacity: 90%;   
+
+}
+
+/* Mensagem de erro caso o produto não seja encontrado */
+.produto-nao-encontrado {
+    text-align: center;
+    width: 100%;
+    padding: 4rem 0;
+}
+.produto-nao-encontrado h1 {
+    font-size: 2rem;
+}
+
+/* Adicione no final do seu arquivo css/detalhe.css */
+
+.produto-imagem-container {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.imagem-principal-wrapper {
+    width: 100%;
+    height: 600px; /* Altura fixa para a imagem principal */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+#imagem-principal {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.produto-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.thumbnail-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    transition: all 0.2s ease;
+    padding: 3px;
+    background-color: #fff;
+}
+
+.thumbnail-img:hover {
+    border-color: #007bff;
+    transform: scale(1.05);
+}
+
+.thumbnail-img.active {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .produto-container {
+        flex-direction: column; /* Em telas pequenas, fica um em cima do outro */
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .produto-info h1 {
+        font-size: 2rem;
+    }
+}

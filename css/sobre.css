@@ -1,0 +1,552 @@
+/* === MAIN === */
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 8.5vh;
+  padding: 0 1rem; /* pequeno padding lateral para evitar corte */
+}
+
+.maincont {
+  width: 70vw;
+  max-width: 1300px;
+  min-height: 55vh;
+  background-color: #4C83F3;
+  border-radius: 20px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 3rem 2rem;
+  margin: 0 auto;
+}
+
+.maincont h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 64px;
+  font-weight: 900;
+  letter-spacing: -3px;
+  margin-bottom: 8px;
+  width: 60vw;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+main span {
+  color: #1a1a1a;
+  background-color: #FEE827;
+  padding: 5px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+main span:hover {
+  transform: scale(1.05);
+}
+
+main p {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  width: 50vw;
+  max-width: 700px;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* === SECTION SOBRE1 === */
+
+.sobre1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 4rem 1rem;
+}
+
+.section1cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75vw;
+  max-width: 1300px;
+  gap: 2rem;
+  height: auto;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.section1cont img {
+  width: 30rem;
+  max-width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.linha-vertical {
+  width: 2px;
+  height: 100%;
+  background-color: #FEE827;
+  margin: 0 10px;
+  display: block;
+}
+
+.sectiontext {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sectiontext h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: -1px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.sectiontext p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+
+/* === SECTION DESENVOLVER === */
+
+.desenvolver {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.desenvolvercont {
+  width: 70vw;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.desenvolvercont h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 52px;
+  letter-spacing: -2px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.devboxcont {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.devbox {
+  flex: 1 1 11vw;
+  max-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.devbox.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.devbox .devnum {
+  background-color: #FEE827;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.devbox h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.devbox p {
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+/* === SECTION ACAO === */
+
+.acao {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.acaocont {
+  width: 70vw;
+  max-width: 1300px;
+  background-color: #4C83F3;
+  border-radius: 20px;
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.acaocont h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  width: 60vw;
+  max-width: 700px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.acaocont p {
+  font-size: 20px;
+  width: 60vw;
+  max-width: 700px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* === RESPONSIVE === */
+
+@media (max-width: 1200px) {
+  .maincont {
+    width: 90vw;
+    padding: 2rem 1rem;
+  }
+
+  .maincont h1 {
+    font-size: 48px;
+    width: 100%;
+  }
+
+  main p {
+    font-size: 20px;
+    width: 90vw;
+    letter-spacing: 1px;
+  }
+
+  .section1cont {
+    width: 90vw;
+  }
+
+  .section1cont img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .sectiontext h2 {
+    font-size: 32px;
+    width: 100%;
+  }
+
+  .sectiontext p {
+    font-size: 15px;
+  }
+
+  .devbox {
+    max-width: 150px;
+    flex: 1 1 30vw;
+  }
+
+  .devboxcont {
+    gap: 1rem;
+  }
+
+  .acaocont {
+    width: 90vw;
+    max-width: 1300px;
+    padding: 2rem 1rem;
+  }
+
+  .acaocont h2 {
+    font-size: 36px;
+    width: 100%;
+  }
+
+  .acaocont p {
+    font-size: 18px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .maincont {
+    width: 90vw;
+    padding: 2rem 1rem;
+  }
+
+  .maincont h1 {
+    font-size: 42px;
+    width: 100%;
+  }
+
+  main p {
+    font-size: 18px;
+    width: 70vw;
+    
+  }
+
+  .section1cont {
+    width: 90vw;
+    flex-direction: column;
+  }
+
+  .section1cont img {
+    max-width: 90vw;
+    margin-bottom: 1rem;
+  }
+
+  .linha-vertical {
+    display: none;
+  }
+
+  .sectiontext {
+    width: 100%;
+  }
+
+  .sectiontext h2 {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .sectiontext p {
+    font-size: 15px;
+  }
+
+  .acaocont {
+    width: 90vw;
+  }
+
+  .acaocont h2 {
+    font-size: 32px;
+    width: 100%;
+  }
+
+  .acaocont p {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    margin-top: 4rem;
+  }
+
+  .maincont {
+    width: 90vw;
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
+  .maincont h1 {
+    font-size: 36px;
+    width: 100%;
+    letter-spacing: -1px;
+  }
+
+  main p {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .section1cont {
+    flex-direction: column;
+    width: 90vw;
+  }
+
+  .section1cont img {
+    max-width: 90vw;
+    margin-bottom: 1rem;
+  }
+
+  .linha-vertical {
+    display: none;
+  }
+
+  .sectiontext {
+    width: 100%;
+  }
+
+  .sectiontext h2 {
+    font-size: 28px;
+    width: 100%;
+  }
+
+  .sectiontext p {
+    font-size: 14px;
+  }
+
+  .devboxcont {
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .devbox {
+    max-width: 300px;
+    flex: 1 1 auto;
+  }
+
+  .acaocont {
+    width: 90vw;
+    padding: 2rem 1rem;
+  }
+
+  .acaocont h2 {
+    font-size: 28px;
+    width: 100%;
+  }
+
+  .acaocont p {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .maincont h1 {
+    font-size: 28px;
+  }
+
+  main p {
+    font-size: 16px;
+  }
+
+  .section1cont {
+    width: 95vw;
+  }
+
+  .section1cont img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .sectiontext h2 {
+    font-size: 24px;
+  }
+
+  .sectiontext p {
+    font-size: 14px;
+  }
+
+  .devbox h3 {
+    font-size: 20px;
+  }
+
+  .devbox p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .acaocont h2 {
+    font-size: 24px;
+  }
+
+  .acaocont p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .devboxcont {
+    display: flex;
+    flex-direction: column;     /* deixa os itens em coluna */
+    align-items: center;        /* centraliza horizontalmente */
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .devbox {
+    max-width: 300px;
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .devboxcont {
+    display: flex;              /* garantir flex */
+    justify-content: center;    /* centralizar itens */
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .devbox {
+    max-width: 150px;
+    flex: 1 1 30vw;
+  }
+
+}
+
+@media (min-width: 1201px) {
+  .maincont h1 {
+    width: 70vw;
+    max-width: 1200px;
+  }
+
+  .maincont p {
+    width: 50vw;
+    max-width: 1200px;
+    text-align: center;
+  }
+
+  .acaocont {
+    width: 70vw;
+    max-width: 1300px;
+  }
+
+  .acaocont h2 {
+    width: 70vw;
+    max-width: 1200px;
+  }
+
+  .acaocont p {
+    width: 50vw;
+    max-width: 1200px;
+  }
+}

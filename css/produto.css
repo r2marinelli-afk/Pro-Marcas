@@ -1,0 +1,213 @@
+/* css/produto.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem; /* Espaço do topo até o conteúdo */
+    width: 100%;
+    padding: 0 2rem; /* Adiciona espaçamento nas laterais */
+}
+
+.maincont {
+    width: 100%;
+    max-width: 1400px; /* Largura máxima do conteúdo */
+}
+
+main h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 900;
+    letter-spacing: -3px;
+    color: #1a1a1a;
+    margin-bottom: 2rem; /* Espaço abaixo do título */
+}
+
+.produtosgrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.produtosgrid a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produtosgrid a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.imgcont {
+    width: 100%;
+    height: 22rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.imgcont img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 'contain' é melhor para logos e produtos */
+    padding: 1rem;
+    transition: transform 0.4s ease;
+}
+
+.produtosgrid a:hover .imgcont img {
+    transform: scale(1.05);
+}
+
+.produtosgrid h3 {
+    color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    margin: 1rem 1rem 0.5rem 1rem;
+    font-weight: 700;
+}
+
+.produtosgrid p {
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    margin: 0 1rem 1rem 1rem;
+    flex-grow: 1; /* Faz o parágrafo empurrar o conteúdo para baixo */
+}
+
+/* ================================== */
+/* CSS PARA PAGINAÇÃO                 */
+/* ================================== */
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lista-paginacao {
+    display: flex;
+    list-style-type: none; /* Remove as bolinhas da lista */
+    padding: 0;
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.item-pagina {
+    margin: 0;
+}
+
+.link-pagina {
+    display: block;
+    padding: 12px 18px;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-left: none;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 700;
+}
+
+.lista-paginacao .item-pagina:first-child .link-pagina {
+    border-left: 1px solid #ddd;
+}
+
+.link-pagina:hover {
+    background-color: #f0f8ff;
+}
+
+/* Estilo do item da página ATIVA */
+.item-pagina.ativo .link-pagina {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    cursor: default;
+}
+
+.aviso-sem-produtos {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    padding: 40px 20px;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 1200px) {
+    .produtosgrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    main h1 {
+        font-size: 3.8rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .produtosgrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    main h1 {
+        font-size: 3.25rem;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 0 1rem;
+        margin-top: 6rem;
+    }
+    main h1 {
+        font-size: 2.6rem;
+        text-align: center;
+    }
+    .produtosgrid {
+        grid-template-columns: 1fr;
+    }
+
+        .paginacao {
+        /* Permite que a área de paginação seja rolada na horizontal */
+        overflow-x: auto;
+
+        /* Alinha os itens à esquerda para o início da rolagem */
+        justify-content: flex-start;
+
+        /* Garante que a paginação não cole nas bordas da tela */
+        padding: 0 1rem;
+    }
+
+    /* Esconde a barra de rolagem visualmente, mas mantém a funcionalidade */
+    .paginacao::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Edge */
+    }
+    .paginacao {
+        -ms-overflow-style: none;  /* IE e Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .link-pagina {
+        /* Reduz um pouco o espaçamento interno nos botões */
+        padding: 10px 15px;
+        /* Reduz um pouco o tamanho da fonte dos números */
+        font-size: 0.9rem;
+    }
+}

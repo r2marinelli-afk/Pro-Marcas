@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="../js/header.js"></script>
+    <script src="../js/scrollAnimation.js"></script>
+    <link rel="stylesheet" href="../css/categorias.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/faviconpro.png" type="image/png">
+    <title>Pro Marcas</title></head>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            
+            <div class="nav-left">
+                <div class="logo">
+                    <a href="../index.html"><img src="../img/Logo.png" alt="Logo"></a>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="produtos.html">Produtos</a>
+                    <div class="dropdown" id="categorias">
+                        <a href="#">Categorias <i class="fa-solid fa-chevron-down"></i></a>
+                    </div>
+                    <a href="sobre.html">Sobre</a>
+                </div>
+            </div>
+
+            <div class="nav-user">
+                <a href="https://api.whatsapp.com/send?phone=555198847633&text=Olá! Tenho interesse em um orçamento." target="_blank">
+                    Fale Conosco <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="backdrop" id="backdrop"></div>
+
+    <div class="submenu-modal" id="menuCategorias">
+        <div class="submenu-left">
+            <a href="mochilas.html" class="menu-item" data-target="sub1">Mochilas e Bags</a>
+            <a href="canecas.html" class="menu-item" data-target="sub2">Canecas Personalizadas</a>
+            <a href="garrafas.html" class="menu-item" data-target="sub3">Garrafas e Copos</a>
+            <a href="couro.html" class="menu-item" data-target="sub4">Couro Personalizado</a>
+            <a href="higiene.html" class="menu-item" data-target="sub5">Higiene e Limpeza</a>
+            <a href="eletronicos.html" class="menu-item" data-target="sub6">Eletronicos Personalizados</a>
+            <a href="executivos.html" class="menu-item" data-target="sub7">Executivos e Corporativos</a>
+            <a href="cadernos.html" class="menu-item" data-target="sub8">Cadernos e Agendas</a>
+            <a href="comunicaçao.html" class="menu-item" data-target="sub9">Comunicação de Marca</a>
+            <a href="vestuario.html" class="menu-item" data-target="sub10">Vestuário</a>
+        </div>
+        
+        <!-- DADOS DAS SUBCATEGORIAS - O JS LÊ DAQUI -->
+        <div class="submenu-right" id="sub1">
+            <a href="categoria.html?categoria=mochilas-corporativas">Mochilas Corporativas</a>
+            <a href="categoria.html?categoria=mochilas-notebooks">Mochilas para Notebooks</a>
+            <a href="categoria.html?categoria=ecobags">Ecobags</a>
+            <a href="categoria.html?categoria=sacolas-promocionais">Sacolas Promocionais</a>
+            <a href="categoria.html?categoria=bolsas-promocionais">Bolsas Promocionais</a>
+            <a href="categoria.html?categoria=necessaires">Necessaires</a>
+            <img src="../img/mochila.jpg" alt="Imagem da Categoria Mochilas">
+        </div>
+        <div class="submenu-right" id="sub2">
+            <a href="categoria.html?categoria=canecas-ceramicas">Canecas Cerâmicas</a>
+            <a href="categoria.html?categoria=canecas-termicas">Canecas Térmicas</a>
+            <a href="categoria.html?categoria=canecas-magicas">Canecas Mágicas</a>
+            <a href="categoria.html?categoria=canecas-premium">Canecas Premium</a>
+            <a href="categoria.html?categoria=conjuntos-e-kits">Conjuntos e Kits</a>
+            <a href="categoria.html?categoria=canecas-tematicas">Canecas Temáticas</a>
+            <img src="../img/caneca.jpg" alt="Imagem da Categoria Canecas">
+        </div>
+        <div class="submenu-right" id="sub3">
+            <a href="categoria.html?categoria=garrafas-termicas">Garrafas Térmicas</a>
+            <a href="categoria.html?categoria=squeeze-esportivo">Squeeze Esportivo</a>
+            <a href="categoria.html?categoria=copos-eco">Copos Eco</a>
+            <a href="categoria.html?categoria=garrafas-de-vidro">Garrafas de Vidro</a>
+            <a href="categoria.html?categoria=travel-mugs">Travel Mugs</a>
+            <a href="categoria.html?categoria=copos-premium">Copos Premium</a>
+            <img src="../img/garrafa.jpg" alt="Imagem da Categoria Garrafas">
+        </div>
+        <div class="submenu-right" id="sub4">
+            <a href="categoria.html?categoria=pastas-executivas">Pastas Executivas</a>
+            <a href="categoria.html?categoria=porta-cartoes">Porta-Cartões</a>
+            <a href="categoria.html?categoria=necessaires-e-kits-de-viagem">Necessaires e Kits de Viagem</a>
+            <a href="categoria.html?categoria=cadernos-com-capa-em-couro">Cadernos com Capa em Couro</a>
+            <a href="categoria.html?categoria=carteiras-e-porta-documentos">Carteiras e Porta-Documentos</a>
+            <a href="categoria.html?categoria=brindes-exclusivos-couro">Brindes Exclusivos</a>
+            <img src="../img/couro.jpg" alt="Imagem da Categoria Couro">
+        </div>
+        <div class="submenu-right" id="sub5">
+            <a href="categoria.html?categoria=alcool-em-gel-personalizado">Álcool em Gel Personalizado</a>
+            <a href="categoria.html?categoria=kits-higiene">Kits Higiene</a>
+            <a href="categoria.html?categoria=sabonetes-liquidos">Sabonetes Líquidos</a>
+            <a href="categoria.html?categoria=produtos-de-limpeza">Produtos de Limpeza</a>
+            <a href="categoria.html?categoria=cosmeticos-basicos">Cosméticos Básicos</a>
+            <a href="categoria.html?categoria=linha-aromaterapia">Linha Aromaterapia</a>
+            <img src="../img/higiene.jpg" alt="Imagem da Categoria Higiene">
+        </div>
+        <div class="submenu-right" id="sub6">
+            <a href="categoria.html?categoria=carregadores-e-power-banks">Carregadores e Power Banks</a>
+            <a href="categoria.html?categoria=fones-de-ouvido">Fones de Ouvido</a>
+            <a href="categoria.html?categoria=caixas-de-som-bluetooth">Caixas de Som Bluetooth</a>
+            <a href="categoria.html?categoria=acessorios-para-celular">Acessórios para Celular</a>
+            <a href="categoria.html?categoria=pen-drives">Pen Drives</a>
+            <a href="categoria.html?categoria=gadgets-inovadores">Gadgets Inovadores</a>
+            <img src="../img/eletronico.jpg" alt="Imagem da Categoria Eletrônicos">
+        </div>
+        <div class="submenu-right" id="sub7">
+            <a href="categoria.html?categoria=kits-executivos">Kits Executivos</a>
+            <a href="categoria.html?categoria=canetas-premium">Canetas Premium</a>
+            <a href="categoria.html?categoria=produtos-em-couro-executivo">Produtos em Couro Executivo</a>
+            <a href="categoria.html?categoria=relogios-personalizados">Relógios Personalizados</a>
+            <a href="categoria.html?categoria=itens-de-mesa">Itens de Mesa</a>
+            <a href="categoria.html?categoria=presentes-vip">Presentes VIP</a>
+            <img src="../img/executivoecorporativo.jpg" alt="Imagem da Categoria Executivos">
+        </div>
+        <div class="submenu-right" id="sub8">
+            <a href="categoria.html?categoria=agendas-corporativas">Agendas Corporativas</a>
+            <a href="categoria.html?categoria=cadernos-executivos">Cadernos Executivos</a>
+            <a href="categoria.html?categoria=bloco-de-notas">Bloco de Notas</a>
+            <a href="categoria.html?categoria=sketchbooks">Sketchbooks</a>
+            <a href="categoria.html?categoria=planners">Planners</a>
+            <a href="categoria.html?categoria=kits-completos-papelaria">Kits Completos</a>
+            <img src="../img/caderno.jpg" alt="Imagem da Categoria Cadernos">
+        </div>
+        <div class="submenu-right" id="sub9">
+            <a href="categoria.html?categoria=kits-de-lancamento">Kits de Lançamento</a>
+            <a href="categoria.html?categoria=welcome-kits">Welcome Kits</a>
+            <a href="categoria.html?categoria=uniformes-e-vestuario-comunicacao">Uniformes e Vestuário</a>
+            <a href="categoria.html?categoria=ambientacao-de-espacos">Ambientação de Espaços</a>
+            <a href="categoria.html?categoria=campanhas-tematicas">Campanhas Temáticas</a>
+            <a href="categoria.html?categoria=ativacoes-de-marca">Ativações de Marca</a>
+            <img src="../img/comunicacaodemarca.png" alt="Imagem da Categoria Comunicação">
+        </div>
+        <div class="submenu-right" id="sub10">
+            <a href="categoria.html?categoria=uniformes-corporativos">Uniformes Corporativos</a>
+            <a href="categoria.html?categoria=camisetas-promocionais">Camisetas Promocionais</a>
+            <a href="categoria.html?categoria=polos-corporativas">Polos Corporativas</a>
+            <a href="categoria.html?categoria=moletons-e-jaquetas">Moletons e Jaquetas</a>
+            <a href="categoria.html?categoria=acessorios-texteis">Acessórios Têxteis</a>
+            <a href="categoria.html?categoria=uniformes-especiais">Uniformes Especiais</a>
+            <img src="../img/vestuario.jpg" alt="Imagem da Categoria Vestuário">
+        </div>
+    </div>
+
+    <div class="mobile-nav-container" id="mobileNavContainer">
+        <div class="mobile-nav-panel" id="main-menu-panel">
+            <a href="produtos.html">Produtos</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="blog.html">Blog</a>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 1rem 0;">
+            
+            <div id="mobile-category-links">
+                </div>
+        </div>
+
+        <div class="mobile-nav-panel" id="submenu-panel">
+            <div class="submenu-header">
+                <button id="back-to-main-menu"><i class="fa-solid fa-chevron-left"></i></button>
+                <h3 id="submenu-title"><a href="#"></a></h3>
+            </div>
+            
+            <div id="submenu-links-container">
+                </div>
+
+            <img id="submenu-image" src="" alt="Imagem da Categoria" style="display: none;">
+
+        </div>
+    </div>
+    
+    <main>
+        <div class="maincont">
+            <div class="maintext">
+                <h1>Produtos de Higiene com Sua Marca: Presença no Dia a Dia</h1>
+                <p>Produtos de higiene e limpeza personalizados representam uma oportunidade estratégica para manter sua marca presente em momentos cotidianos. Na Pro Marcas, desenvolvemos linhas completas de higiene pessoal e limpeza com sua identidade visual, criando pontos de contato frequentes e úteis com seu público.</p>
+<a class="especialistabtn"href="https://api.whatsapp.com/send?phone=555198847633&text=Olá! Tenho interesse em um orçamento." target="_blank">
+                Fale com um Especialista <i class="fab fa-whatsapp"></i>
+            </a>              </div>
+            <img src="../img/higiene.jpg" alt="">
+        </div>
+    </main>
+
+    <section class="desenvolver" id="dev-numeros">
+        <div class="desenvolvercont">
+            <h2>Por que Escolher Produtos de Higiene da Pro Marcas</h2>
+            <div class="devboxcont">
+                <div class="devbox">
+                    <div class="devnum">01</div>
+                    <h3>Laboratórios Certificados</h3>
+                    <p>Parceria com fabricantes que seguem normas ANVISA</p>
+                </div>
+                <div class="devbox">
+                    <div class="devnum">02</div>
+                    <h3>Formulações Customizáveis</h3>
+                    <p>Desenvolvimento exclusivo para suas necessidades</p>
+                </div>
+                <div class="devbox">
+                    <div class="devnum">03</div>
+                    <h3>Personalização Completa</h3>
+                    <p>Do rótulo à embalagem, tudo com sua identidade</p>
+                </div>
+                <div class="devbox">
+                    <div class="devnum">04</div>
+                    <h3>Baixo Volume Mínimo</h3>
+                    <p>Viabilidade para testes e campanhas menores</p>
+                </div>
+                <div class="devbox">
+                    <div class="devnum">05</div>
+                    <h3>Soluções Sustentáveis</h3>
+                    <p>Opções eco-friendly para marcas conscientes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="depoimento">
+        <div class="depoimentocont">
+            <img src="../img/aspas.png" alt="">
+            <p>Desenvolvemos uma linha completa de produtos de higiene com a Pro Marcas que revolucionou nossa comunicação interna e reforçou nossos valores de cuidado e bem-estar. Os produtos são tão qualificados que se tornaram presentes muito requisitados por nossos clientes.</p>
+            <h3>Nome do Cliente - Empresa</h3>
+        </div>
+    </section>
+
+    <section class="categorias">
+        <h2>Soluções Personalizáveis para Sua Marca</h2>
+        <div class="categoriascont">
+            <div class="categoriabox" style="background-image: url('../img/alcoolemgel.png');">
+                <div class="text">
+                    <a href="">
+                        <h3>Álcool em Gel Personalizado<i class="fa-solid fa-arrow-right"></i></h3>
+                        <p>Item essencial com alta visibilidade</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="categoriabox" style="background-image: url('../img/kitshigiene.png');">
+                <div class="text">
+                    <a href="">
+                        <h3>Kits Higiene<i class="fa-solid fa-arrow-right"></i></h3>
+                        <p>Conjuntos práticos para viagem ou uso diário</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="categoriabox" style="background-image: url('../img/sabonetesliquidos.png');">
+                <div class="text">
+                    <a href="">
+                        <h3>Sabonetes Líquidos<i class="fa-solid fa-arrow-right"></i></h3>
+                        <p>Presença constante em momentos de cuidado pessoal</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mais 3 boxes para a segunda linha -->
+            <div class="categoriabox" style="background-image: url('../img/produtoslimpeza.png');">
+                <div class="text">
+                    <a href="">
+                        <h3>Produtos de Limpeza<i class="fa-solid fa-arrow-right"></i></h3>
+                        <p>Linha completa para ambientes corporativos ou brindes</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="categoriabox" style="background-image: url('../img/cosmeticosbasicos.png');">
+                <div class="text">
+                    <a href="">
+                        <h3>Cosméticos Básicos<i class="fa-solid fa-arrow-right"></i></h3>
+                        <p>Hidratantes, protetores labiais e solares</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="categoriabox" style="background-image: url('../img/linhaaromaterapia.png');">
+                <div class="text">
+                    <a href="">
+                        <h3>Linha Aromaterapia<i class="fa-solid fa-arrow-right"></i></h3>
+                        <p>Difusores, velas e essências com sua identidade</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="desenvolver" id="dev-imagens">
+        <div class="desenvolvercont">
+            <h2>Como Maximizar o Impacto dos Seus Produtos de Higiene Personalizados</h2>
+            <div class="devboxcont">
+                <div class="devbox">
+                    <img src="../imgicones/ambientehi.png" alt="">
+                    <h3>Ambiente Corporativo</h3>
+                    <p>Disponibilize produtos com sua marca nos espaços comuns</p>
+                </div>
+                <div class="devbox">
+                    <img src="../imgicones/hoteishi.png" alt="">
+                    <h3>Hotéis e Hospedagens</h3>
+                    <p>Crie experiências completas com amenities exclusivos</p>
+                </div>
+                <div class="devbox">
+                    <img src="../imgicones/kithigiene.png" alt="">
+                    <h3>Kits Promocionais</h3>
+                    <p>Combine com outros itens para criar experiências completas</p>
+                </div>
+                <div class="devbox">
+                    <img src="../imgicones/saudehi.png" alt="">
+                    <h3>Campanhas de Saúde</h3>
+                    <p>Reforce mensagens de bem-estar com produtos úteis</p>
+                </div>
+                <div class="devbox">
+                    <img src="../imgicones/eventohi.png" alt="">
+                    <h3>Eventos e Convenções</h3>
+                    <p>Ofereça itens práticos que serão utilizados diariamente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="acao">
+        <div class="acaocont">
+            <h2>Desenvolva Produtos de Higiene Exclusivos para Sua Marca</h2>
+            <p>Vamos criar uma linha completa que comunica seus valores e fortalece sua presença diária.</p>
+            <a class="especialistabtn" href="">Fale com um especialista <i class="fa-solid fa-phone"></i></a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <!-- Coluna 1: Logo e Sobre -->
+            <div class="footer-about">
+                <div class="logo">
+                    <a href="../index.html"><img src="../img/Logo.png" alt="Logo da Empresa"></a>
+                </div>
+                <p>Transformamos suas ideias em produtos únicos e memoráveis. Mais do que itens personalizados, criamos conexões e eternizamos momentos.</p>
+            </div>
+
+            <!-- Coluna 2: Links Rápidos -->
+            <div class="footer-links">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3: Categorias -->
+            <div class="footer-links">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="mochilas.html">Mochilas e Bags</a></li>
+                    <li><a href="canecas.html">Canecas Personalizadas</a></li>
+                    <li><a href="garrafas.html">Garrafas e Copos</a></li>
+                    <li><a href="couro.html">Couro Personalizado</a></li>
+                    <li><a href="higiene.html">Higiene e Limpeza</a></li>
+                    <li><a href="eletronicos.html">Eletronicos Personalizados</a></li>
+                    <li><a href="executivos.html">Executivos e Corporativos</a></li>
+                    <li><a href="cadernos.html">Cadernos e Agendas</a></li>
+                    <li><a href="comunicaçao.html">Comunicação de Marca</a></li>
+                    <li><a href="vestuario.html">Vestuário</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 4: Contato -->
+            <div class="footer-contact">
+                 <h3>Fale Conosco</h3>
+<a class="contact-button" href="https://api.whatsapp.com/send?phone=555198847633&text=Olá! Tenho interesse em um orçamento." target="_blank">
+                        Contato <i class="fab fa-whatsapp"></i>
+                    </a>               </div>
+        </div>
+    </footer>
+</body>
+</html>
